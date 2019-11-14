@@ -1,0 +1,69 @@
+#flyOutMenu {
+  background-color: #333;
+  height: 100vh;
+  width: calc(100vw-55px);
+  position: fixed;
+  z-index: 2;
+  -webkit-transition: width 1s; 
+  transition: width 1s;
+}
+
+#flyOutMenu.show {
+  width: 100vw;
+  -webkit-transition: width 1s; 
+  transition: width 1s;
+}
+
+#topNav-container {
+  position: fixed;
+  width: calc(100vw - 55px);
+  top: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+#topNav-container.hide {
+  transform: translateY(-100%);
+}
+
+#body-container {
+  background-color: ghostwhite;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-left: 55px;
+}
+
+#routerOutlet {
+  margin-top: 68px;
+}
+
+footer {
+  background-color: #cc3333; 
+  margin-top: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  #flyOutMenu {
+    width: 25vw;
+  }
+
+  #body-container {
+    padding-left: 25vw;
+  }
+
+  #topNav-container {
+    width: 75vw;
+  }
+
+  footer {
+    padding: 1em 0;
+    width: 75vw;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {}
+
+
+
